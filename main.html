@@ -1,0 +1,16 @@
+<h1>Questionaire</h1>
+<form action='/quiz' method='POST'>
+    <ol>
+        {% for i in q %}
+            <li>{{i}}</li>
+            {% for j in o[i] %}
+                <input type='radio' value='{{j}}' name='{{i}}' required/>{{j}}
+            {% endfor %}
+        {% endfor %}
+      <br><br>
+        6.What is Handling function?<br><br>
+        <textarea rows="4" cols="50" required> </textarea>
+    </ol>
+    <input type="submit" value="submit" />
+    <input type="reset" value="reset" />
+</form>
